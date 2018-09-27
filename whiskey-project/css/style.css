@@ -1,0 +1,262 @@
+body {
+    font-family: 'Encode Sans', sans-serif;
+}
+
+/* Containers */
+
+.alert-container {}
+
+.quotes-container {
+    padding-bottom: 53px;
+}
+
+.features-container {
+    padding-bottom: 53px;
+}
+
+.monthly-favourites-container {}
+
+/*Callout*/
+.callout-container {
+    /*100vh = 100% of the viewport's height */
+    height: 100vh;
+    background: url(../img/whiskey.jpg) no-repeat center center fixed;
+    /* vendor prefixes - css rules work different in some cases for different browsers, so these rules target certain browsers correctly */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+    /*centres the callout text vertically within the container*/
+    display: flex;
+    align-items: center;
+}
+
+.callout-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.66);
+    /*left:0 so it reaches to the edge of the viewport (without this it leaves a small gap next to the overlay on the left)*/
+    left: 0;
+}
+
+/* Alert */
+.site-wide-alert {
+    /*centers the warning text*/
+    text-align: center;
+    border-radius: 0;
+    border-color: transparent;
+    background-color: #ffe661;
+    color: #29250e;
+    /*padding controls the size of the alert box*/
+    padding: 8px;
+}
+
+/* Jumbotron */
+/*centres the text on the callout (bootstraps default doesn't do this for some reason)*/
+.callout-container .row {
+    margin: 0 auto;
+}
+
+/*removes default bootstrap styling (grey background)*/
+.jumbotron {
+    background-color: transparent;
+}
+
+/*styling for the various text elements of the callout*/
+.jumbotron h1 {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.jumbotron hr {
+    width: 50px;
+}
+
+.jumbotron small {
+    font-size: 65%;
+    font-style: italic;
+    color: #eaeaea;
+}
+
+.jumbotron p {
+    margin-bottom: 15px;
+    font-size: 21px;
+    font-weight: 200;
+    color: #fff;
+}
+
+/* Buttons */
+.btn--cta {
+    font-weight: bold;
+    border-radius: 20px;
+    width: 150px;
+    margin-top: 10px;
+}
+
+.btn--cta:focus,
+.btn--cta:hover,
+.btn--cta:active,
+.btn--cta:active:focus {
+    background-color: #5cb85c;
+}
+
+/* Nav */
+.navbar {
+    margin-bottom: 0;
+    /*position absolute so the nav sits on top of the callout*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 1;
+}
+
+.navbar .navbar-brand {
+    font-weight: bold;
+    color: white;
+}
+
+/*this was pulled straight from Chrome. Targets the home nav link which had what looked like a selection box around it before*/
+/*having to be very specific here in order to overwrite bootstrap's styles*/
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover {
+    color: white;
+    background-color: transparent;
+}
+
+/*this targets the about link*/
+.navbar-default .navbar-nav>li>a:focus, 
+.navbar-default .navbar-nav>li>a:hover {
+    color: white;
+}
+
+/*as does this*/
+.navbar-default .navbar-nav>li>a {
+    color: white;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-text {
+    color: white;
+}
+
+.navbar-default .navbar-toggle {
+    /*turns off border around hamburger*/
+    border: 0;
+}
+
+.navbar-default .navbar-collapse {
+    /*turns off border above open nav*/
+    border-color: transparent;
+}
+
+.navbar-default .navbar-toggle:focus, 
+.navbar-default .navbar-toggle:hover {
+    /*turns off hamburger background changing on hover etc.*/
+    background-color: transparent;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    /*changes the hamburger to white */
+    background-color: white;
+}
+
+/*targets the individual bars of the hamburger*/
+.navbar-toggle .icon-bar+.icon-bar {
+    margin-top: 7px;
+}
+
+/*targets the navbar sign up button*/
+.navbar-btn {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: #5cb85c;
+    border-radius: 20px;
+    color: white;
+    border-color: #398439;
+    width: 80px;
+}
+
+/*targets navbar sign up button states*/
+.btn-default.active.focus, 
+.btn-default.active:focus, 
+.btn-default.active:hover, 
+.btn-default:active.focus, 
+.btn-default:active:focus, 
+.btn-default:active:hover, 
+.open>.dropdown-toggle.btn-default.focus, 
+.open>.dropdown-toggle.btn-default:focus, 
+.open>.dropdown-toggle.btn-default:hover {
+    color: white;
+    background-color: #5cb85c;
+    border-color: #398439;
+}
+.btn-default:hover {
+    color: white;
+    background-color: #5cb85c;
+    border-color: #398439;
+}
+
+/*targets whiskeydrop brand text*/
+.navbar-default .navbar-brand:focus, 
+.navbar-default .navbar-brand:hover {
+    color: white;
+}
+
+/* PAGE HEADER */
+.page-header {
+    padding-bottom: 2px;
+    margin: 52px 0 20px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+.monthly-favourites .page-header {
+    border-bottom: 0;
+}
+
+/* QUOTES */
+.quote {
+    border-left: 0;
+}
+
+.quotes .media:first-child {
+    margin-top: 20px;
+}
+
+/* FEATURES */
+.features {
+    text-align: center;
+    line-height: 23px;
+}
+
+.features .glyphicon {
+    /*puts the glyphicons on their own line*/
+    display: block;
+    margin-bottom: 15px;
+    font-size: 38px;
+}
+
+.features .btn {
+    font-weight: bold;
+    border-radius: 20px;
+    width: 150px;
+    margin-top: 16px;
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+/*only targeting mobile, features are spaced alright when they are side by side on larger screens */
+@media (max-width: 991px) {
+    /*individual feature*/
+    .feature {
+        margin-bottom: 53px;
+    }
+}
