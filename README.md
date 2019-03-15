@@ -6,3 +6,5 @@ This project was developed mainly as a learning tool exploring the design possib
 There is no functioning backend code on the site. All sign-up buttons are dummy, popping up a dummy sign-up form.
 
 In addition, the website is a single page application so the nav links are also dummy.
+
+The project is currently hosted [here](https://dhamma1991.github.io/whiskey-bootstrap-frontend-project/) on GitHub Pages.
