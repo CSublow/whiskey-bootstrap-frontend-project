@@ -260,3 +260,17 @@ body {
         margin-bottom: 53px;
     }
 }
+
+/* FOOTER */
+footer {
+    margin-bottom: 10px;
+}
+
+footer li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+footer li:nth-child(2) {
+    margin: 0 10%;
+}
